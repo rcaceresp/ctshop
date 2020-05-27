@@ -2,11 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
  
 import * as ROUTES from '../../constants/routes';
+import { AuthUserContext } from '../session';
 
 // Custom
 import SignOutButton from './signoutButton';
 
-const Navigation = ({ authUser = null }) => (
+const Navigation = () => (
+  <AuthUserContext.Consumer>
+    {authUser => buildMenu(authUser)}
+  </AuthUserContext.Consumer>
+);
+
+const buildMenu = authUser => (
   <nav className="navbar" role="navigation" aria-label="main navigation">
     <div className="navbar-brand">
       <a className="navbar-item" href="/">
@@ -34,6 +41,9 @@ const Navigation = ({ authUser = null }) => (
       </Link>}
       {!authUser && <Link to={ROUTES.SIGN_IN} className="navbar-item is-link is-small">
           <span className="icon"><i className="fa fa-sign-in"/></span><b>Inicia Sesi&oacute;n</b>
+      </Link>}
+      {authUser && <Link to={ROUTES.ACCOUNT} className="navbar-item is-link is-small">
+          <span className="icon"><i className="fa fa-user"/></span><b>Mi Cuenta</b>
       </Link>}
       {authUser && <SignOutButton />}
     </div>
