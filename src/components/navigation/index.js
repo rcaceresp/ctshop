@@ -14,7 +14,7 @@ const Navigation = () => (
 );
 
 const buildMenu = authUser => (
-  <nav className="navbar is-primary is-fixed-top is-bold" role="navigation" aria-label="main navigation">
+  <nav className="navbar is-dark is-fixed-top is-bold" role="navigation" aria-label="main navigation">
     <div className="navbar-brand">
       <a className="navbar-item" href="/">
         <img src="logo.png" height="28" alt="CatrachosShop"/>
@@ -31,6 +31,7 @@ const buildMenu = authUser => (
     <div className="navbar-menu">
       <div className="navbar-start">
         <Link to={ROUTES.HOME} className="navbar-item"><b>Inicio</b></Link>
+        <Link to={ROUTES.HOME} className="navbar-item"><b>Tiendas</b></Link>
         {/* <Link to={ROUTES.SIGN_UP} className="navbar-item">Tiendas</Link> */}
       </div>
     </div>

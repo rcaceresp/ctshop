@@ -29,7 +29,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-primary">
+                            <button className="button is-warning is-small has-text-weight-semibold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -53,7 +53,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-primary">
+                            <button className="button is-warning is-small has-text-weight-semibold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -77,7 +77,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-primary">
+                            <button className="button is-warning is-small has-text-weight-semibold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -101,7 +101,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-primary">
+                            <button className="button is-warning is-small has-text-weight-semibold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -136,7 +136,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-primary">
+                            <button className="button is-warning is-small has-text-weight-semibold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -160,7 +160,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-primary">
+                            <button className="button is-warning is-small has-text-weight-semibold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -184,7 +184,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-primary">
+                            <button className="button is-warning is-small has-text-weight-semibold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -208,7 +208,114 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-primary">
+                            <button className="button is-warning is-small has-text-weight-semibold">
+                              <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>{/*  Columns */}
+              </div>
+            </div>
+          </div>
+          <br/>
+          <div className="card">
+            <div className="card-content">
+              <h4 className="title is-4">Los mas vendidos</h4>
+              <hr/>
+              <div className="row">
+                <div className="columns">
+                  <div className="column">
+                    <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-4by3">
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-content">
+                            <p class="title is-4">Camiseta nike - Sudor Intenso</p>
+                            <p class="subtitle is-6">Vendido por: Reina Caceres</p>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div className="buttons">
+                            <button className="button is-warning is-small has-text-weight-semibold">
+                              <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="column">
+                    <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-4by3">
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-content">
+                            <p class="title is-4">Camiseta nike - Sudor Intenso</p>
+                            <p class="subtitle is-6">Vendido por: Reina Caceres</p>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div className="buttons">
+                            <button className="button is-warning is-small has-text-weight-semibold">
+                              <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="column">
+                    <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-4by3">
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-content">
+                            <p class="title is-4">Camiseta nike - Sudor Intenso</p>
+                            <p class="subtitle is-6">Vendido por: Reina Caceres</p>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div className="buttons">
+                            <button className="button is-warning is-small has-text-weight-semibold">
+                              <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="column">
+                    <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-4by3">
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-content">
+                            <p class="title is-4">Camiseta nike - Sudor Intenso</p>
+                            <p class="subtitle is-6">Vendido por: Reina Caceres</p>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div className="buttons">
+                            <button className="button is-warning is-small has-text-weight-semibold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
