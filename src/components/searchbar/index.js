@@ -6,9 +6,9 @@ const type = () => {
 
     if (typeWriterEl) {
       const tw = new Typewriter(typeWriterEl, {
-        strings: ['Computadoras', 'Air Jordan', 'Apple', 'Cocina'],
+        strings: ['Computadoras', 'Air Jordan', 'Apple', 'Cocina', 'Juguetes'],
         autoStart: true,
-        loop: false,
+        loop: true,
         cursor: '_',
         pauseFor: 5000
       });
@@ -29,7 +29,7 @@ const SearchBar = () => {
               <h6 className="title is-5 has-text-centered">
                 <span>¿Qu&eacute; estas buscando?</span>
               </h6>
-              <h2 className="title is-2 typewriter-show"></h2>
+              <h2 className="title is-2 typewriter-show">Computadoras</h2>
               <div className="field has-addons">
                 <div className="control is-expanded has-icons-left">
                   <input
