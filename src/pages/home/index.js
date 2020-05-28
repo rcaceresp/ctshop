@@ -9,10 +9,34 @@ const Home = props => {
         <div className="container">
           <div className="card">
             <div className="card-content">
-              <h4 className="title is-3">Promociones</h4>
+              <h4 className="title is-3">Ofertas</h4>
               <hr/>
               <div className="row">
                 <div className="columns">
+                  <div className="column">
+                    <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-4by3">
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Catrachos Shop" />
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-content">
+                            <h5 class="title is-4">Camiseta nike - Sudor Intenso</h5>
+                            <p class="subtitle is-6">Vendido por: Reina Caceres</p>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div className="buttons">
+                            <button className="button is-warning is-small has-text-weight-bold">
+                              <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div className="column">
                     <div class="card">
                       <div class="card-image">
@@ -116,7 +140,7 @@ const Home = props => {
           <br/>
           <div className="card">
             <div className="card-content">
-              <h4 className="title is-3">Ultimos Productos</h4>
+              <h4 className="title is-3">Promociones</h4>
               <hr/>
               <div className="row">
                 <div className="columns">
@@ -124,7 +148,31 @@ const Home = props => {
                     <div class="card">
                       <div class="card-image">
                         <figure class="image is-4by3">
-                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Catrachos Shop" />
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-content">
+                            <h5 class="title is-4">Camiseta nike - Sudor Intenso</h5>
+                            <p class="subtitle is-6">Vendido por: Reina Caceres</p>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div className="buttons">
+                            <button className="button is-warning is-small has-text-weight-bold">
+                              <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="column">
+                    <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-4by3">
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Catrachos Shop" />
                         </figure>
                       </div>
                       <div class="card-content">
@@ -223,7 +271,7 @@ const Home = props => {
           <br/>
           <div className="card">
             <div className="card-content">
-              <h4 className="title is-3">Los mas vendidos</h4>
+              <h4 className="title is-3">Lo mas vendido</h4>
               <hr/>
               <div className="row">
                 <div className="columns">
@@ -231,7 +279,31 @@ const Home = props => {
                     <div class="card">
                       <div class="card-image">
                         <figure class="image is-4by3">
-                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Catrachos Shop" />
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-content">
+                            <h5 class="title is-4">Camiseta nike - Sudor Intenso</h5>
+                            <p class="subtitle is-6">Vendido por: Reina Caceres</p>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div className="buttons">
+                            <button className="button is-warning is-small has-text-weight-bold">
+                              <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="column">
+                    <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-4by3">
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Catrachos Shop" />
                         </figure>
                       </div>
                       <div class="card-content">
@@ -327,6 +399,7 @@ const Home = props => {
               </div>
             </div>
           </div>
+          <br/>
           <br/><br/>
           <div className="card">
             <div className="card-content">
