@@ -31,6 +31,40 @@ const AccountPage = () => (
                   </div>
                 </aside>
               </div>
+              <div className="column">
+                <div className="card">
+                  <div className="card-content">
+                    <h3 className="title is-3">Bienvenido, {authUser.email}</h3>
+                    <hr/>
+                    <div className="table-container">
+                      <table className="table is-fullwidth is-striped">
+                        <thead>
+                          <tr>
+                            <th><abbr title="Position">#</abbr></th>
+                            <th>Nombre</th>
+                            <th><abbr title="Played">precio</abbr></th>
+                            <th><abbr title="Won">total</abbr></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>1</th>
+                            <td>36</td>
+                            <td>+32</td>
+                            <td>81</td>
+                          </tr>
+                          <tr>
+                          <th>1</th>
+                            <td>36</td>
+                            <td>+32</td>
+                            <td>81</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
