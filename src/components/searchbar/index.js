@@ -21,7 +21,7 @@ const SearchBar = () => {
   type();
   
   return (
-    <section className="section hero is-small is-primary is-bold" style={ {paddingTop: '2rem', paddingBottom: '1.5rem'}}>
+    <section className="section hero is-small is-bold" style={ {paddingTop: '2rem', paddingBottom: '1.5rem'}}>
       <div className="hero-body" style={ {paddingTop: 0, paddingBottom: 0}}>
         <div className="container">
           <div className="columns is-centered">
@@ -32,7 +32,7 @@ const SearchBar = () => {
               <div className="field has-addons">
                 <div className="control is-expanded has-icons-left">
                   <input
-                    className="input is-warning is-rounded"
+                    className="input is-primary is-rounded"
                     type="text"
                     placeholder="Encuentra lo que buscas, Aqu&iacute;"
                     onChange={ (e) => {}}
@@ -43,7 +43,7 @@ const SearchBar = () => {
                   </span>
                 </div>
                 <div className="control">
-                  <button className="button is-warning is-rounded " onClick={ e => {}}>
+                  <button className="button is-primary is-rounded " onClick={ e => {}}>
                     <span className="icon">
                       <i className="fa fa-search" />
                     </span>
