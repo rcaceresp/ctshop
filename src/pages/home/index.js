@@ -29,7 +29,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -53,7 +53,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -77,7 +77,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -101,7 +101,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -125,7 +125,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -160,7 +160,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -184,7 +184,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -208,7 +208,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -232,7 +232,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -256,7 +256,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -291,7 +291,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -315,7 +315,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -339,7 +339,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -363,7 +363,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
@@ -387,7 +387,7 @@ const Home = props => {
                         </div>
                         <div class="content">
                           <div className="buttons">
-                            <button className="button is-warning is-small has-text-weight-bold">
+                            <button className="button is-warning is-rounded is-small has-text-weight-bold">
                               <span className="icon"><i className="fa fa-eye"/></span> <span>Ver Producto</span>
                             </button>
                           </div>
