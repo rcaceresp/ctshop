@@ -17,46 +17,50 @@ const type = () => {
     }
 };
 
-const SearchBar = () => {
-  type();
-  
-  return (
-    <section className="section hero is-small  is-dark is-bold" style={ {paddingTop: '2rem', paddingBottom: '1.5rem'}}>
-      <div className="hero-body" style={ {paddingTop: 0, paddingBottom: 0}}>
-        <div className="container">
-          <div className="columns is-centered">
-            <div className="column is-two-thirds has-text-centered">
-              <h6 className="title is-5 has-text-centered">
-                <span>¿Qu&eacute; estas buscando?</span>
-              </h6>
-              <h2 className="title is-2 typewriter-show">Computadoras</h2>
-              <div className="field has-addons">
-                <div className="control is-expanded has-icons-left">
-                  <input
-                    className="input is-primary is-rounded"
-                    type="text"
-                    placeholder="Encuentra lo que buscas, Aqu&iacute;"
-                    onChange={ (e) => {}}
-                    onKeyPress={(e) => {}}
-                  />
-                  <span className="icon is-large is-left">
-                    <i className="fa fa-search"/>
-                  </span>
-                </div>
-                <div className="control">
-                  <button className="button is-primary is-rounded " onClick={ e => {}}>
-                    <span className="icon">
-                      <i className="fa fa-search" />
+class SearchBar extends React.Component {
+
+  componentDidMount(){
+    type();
+  }
+
+  render() {
+    return (
+      <section className="section hero is-small is-dark is-bold search-bar" style={ {paddingTop: '2rem', paddingBottom: '1.5rem'}}>
+        <div className="hero-body" style={ {paddingTop: 0, paddingBottom: 0}}>
+          <div className="container">
+            <div className="columns is-centered">
+              <div className="column is-two-thirds has-text-centered">
+                <p className="has-text-centered">
+                  <span> <b>¿Qu&eacute; estas buscando?</b></span>
+                </p>
+                <h2 className="title is-2 typewriter-show">Computadoras</h2>
+                <div className="field has-addons">
+                  <div className="control is-expanded has-icons-left">
+                    <input
+                      className="input is-primary is-rounded"
+                      type="text"
+                      placeholder="Encuentra lo que buscas, Aqu&iacute;"
+                      onChange={ (e) => {}}
+                      onKeyPress={(e) => {}}
+                    />
+                    <span className="icon is-large is-left">
+                      <i className="fa fa-search"/>
                     </span>
-                  </button>
+                  </div>
+                  <div className="control">
+                    <button className="button is-primary is-rounded " onClick={ e => {}}>
+                      <span className="icon">
+                        <i className="fa fa-search" />
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
- );
-};
-
+      </section>
+    );
+  }
+}
 export default SearchBar;

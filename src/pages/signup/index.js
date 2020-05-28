@@ -21,8 +21,8 @@ const SignUpPage = () => (
       <p className="has-text-centered">Llena el formulario a continuacion y se parte de este emprendimiento en favor de la comunidad.</p>
       <hr/>
       <div className="row">
-        <div className="columns is-centered">
-          <div className="column is-half">
+        <div className="columns is-centered is-desktop">
+          <div className="column is-two-fifths">
             <SignUpForm />
           </div>
         </div>
@@ -76,8 +76,9 @@ class SignUpFormBase extends Component {
     return (
       <div className="card is-info">
         <p className="has-text-centered">
-            <img src="activation.svg" alt="Registrate" width="80"/>
-          </p>
+          <br/>
+          <img src="activation.svg" alt="Registrate" width="80"/>
+        </p>
         <div className="card-content">
           
           <form onSubmit={this.onSubmit}>
