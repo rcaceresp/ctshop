@@ -1,0 +1,22 @@
+.product-title {
+  margin-bottom: 0rem !important;
+  line-height: 1.5;
+
+  @media only screen and (min-width: 769px) {
+    max-width: 220px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.product-card {
+  border-radius: 10px;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all .2s ease-in-out;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+  }
+}
