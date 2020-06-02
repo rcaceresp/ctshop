@@ -7,48 +7,75 @@ import { AuthUserContext } from '../session';
 // Custom
 import SignOutButton from './signoutButton';
 
-const Navigation = () => (
-  <AuthUserContext.Consumer>
-    {authUser => buildMenu(authUser)}
-  </AuthUserContext.Consumer>
-);
+// const Navigation = () => (
+//   <AuthUserContext.Consumer>
+//     {authUser => buildMenu(authUser)}
+//   </AuthUserContext.Consumer>
+// );
 
-const buildMenu = authUser => (
-  <nav className="navbar is-light is-fixed-top is-bold" role="navigation" aria-label="main navigation">
-    <div className="navbar-brand">
-      <a className="navbar-item" href="/">
-        <img src="logo.png" height="28" alt="CatrachosShop"/>
-      </a>
+class Menu extends React.Component {
+  constructor(props) {
+    super(props);
 
-      <a href="/" role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
+    this.state = {
+      menuIsOpen: false
+    };
 
-    {/* Menu Items */}
-    <div className="navbar-menu">
-      <div className="navbar-start">
-        <Link to={ROUTES.HOME} className="navbar-item"><b>Inicio</b></Link>
-        <Link to={ROUTES.HOME} className="navbar-item"><b>Tiendas</b></Link>
-        {/* <Link to={ROUTES.SIGN_UP} className="navbar-item">Tiendas</Link> */}
-      </div>
-    </div>
-    <div className="navbar-end">
-      <Link className="navbar-item is-link is-small" to="/cart"><i className="fa fa-shopping-cart" /></Link>
-      {!authUser && <Link to={ROUTES.SIGN_UP} className="navbar-item is-link is-small">
-        <span className="icon"><i className="fa fa-id-badge"/></span><b>Registrate</b>
-      </Link>}
-      {!authUser && <Link to={ROUTES.SIGN_IN} className="navbar-item is-link is-small">
-          <span className="icon"><i className="fa fa-sign-in"/></span><b>Inicia Sesi&oacute;n</b>
-      </Link>}
-      {authUser && <Link to={ROUTES.ACCOUNT} className="navbar-item is-link is-small">
-          <span className="icon"><i className="fa fa-user"/></span><b>Mi Cuenta</b>
-      </Link>}
-      {authUser && <SignOutButton />}
-    </div>
-  </nav>
-);
- 
-export default Navigation;
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+  toggleMenu(e) {
+    e.preventDefault();
+    const menuIsOpen = this.state.menuIsOpen;
+
+    this.setState({ menuIsOpen: !menuIsOpen});
+  }
+
+  render() {
+    const { menuIsOpen } = this.state;
+    const { toggleMenu } = this;
+    const menuIsOpenClassString = menuIsOpen ? 'is-active' : '';
+
+
+    return(
+      <AuthUserContext.Consumer>
+        {authUser => <nav className="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation">
+          <div className="navbar-brand">
+            <a className="navbar-item" href="/">
+              <img src="logo.png" height="28" alt="CatrachosShop"/>
+            </a>
+
+            <a href="##" onClick={toggleMenu} role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
+          {/* Menu Items */}
+          <div className={`navbar-menu ${menuIsOpenClassString} is-light`}>
+            <div className="navbar-start">
+              <Link to={ROUTES.HOME} className="navbar-item"><b>Inicio</b></Link>
+              <Link to={ROUTES.HOME} className="navbar-item"><b>Tiendas</b></Link>
+            </div>
+            <div className="navbar-end">
+              <Link className="navbar-item is-link is-small" to="/cart"><i className="fa fa-shopping-cart" /></Link>
+              {!authUser && <Link to={ROUTES.SIGN_UP} className="navbar-item is-link is-small">
+                <span className="icon"><i className="fa fa-id-badge"/></span><b>Registrate</b>
+              </Link>}
+              {!authUser && <Link to={ROUTES.SIGN_IN} className="navbar-item is-link is-small">
+                  <span className="icon"><i className="fa fa-sign-in"/></span><b>Inicia Sesi&oacute;n</b>
+              </Link>}
+              {authUser && <Link to={ROUTES.ACCOUNT} className="navbar-item is-link is-small">
+                  <span className="icon"><i className="fa fa-user"/></span><b>Mi Cuenta</b>
+              </Link>}
+              {authUser && <SignOutButton />}
+            </div>
+          </div>
+        </nav>}
+      </AuthUserContext.Consumer>
+    );
+  }
+}
+
+export default Menu;

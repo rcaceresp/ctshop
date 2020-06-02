@@ -13,6 +13,10 @@
 .product-card {
   border-radius: 10px;
 
+  .media-content {
+    overflow-x: inherit;
+  }
+
   &:hover {
     transform: scale(1.05);
     transition: all .2s ease-in-out;

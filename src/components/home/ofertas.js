@@ -33,7 +33,7 @@ class OfertasBase extends React.Component {
     return (
       <section className="section">
         <div className="container">
-          <h4 className="title is-2">Ofertas</h4>
+          <h4 className="title is-2 has-text-weight-bold">Ofertas</h4>
           <hr/>
           <div className="row">
             <div className="columns is-multiline is-mobile">

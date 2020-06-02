@@ -32,7 +32,7 @@ class SearchBar extends React.Component {
               <p className="has-text-centered">
                 <span> <b>¿Qu&eacute; estas buscando?</b></span>
               </p>
-              <h1 className="title is-1 typewriter-show">Computadoras</h1>
+              <h1 className="title is-1 typewriter-show has-text-weight-bold">Computadoras</h1>
               <div className="field has-addons">
                 <div className="control is-expanded has-icons-left">
                   <input
