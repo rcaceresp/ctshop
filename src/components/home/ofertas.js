@@ -36,8 +36,8 @@ class OfertasBase extends React.Component {
           <h4 className="title is-2">Ofertas</h4>
           <hr/>
           <div className="row">
-            <div className="columns is-multiline">
-              {ofertas && ofertas.length && ofertas.map( oferta => <div className="column is-one-fifth">
+            <div className="columns is-multiline is-mobile">
+              {ofertas && ofertas.length && ofertas.map( oferta => <div className="column is-two-fifth-mobile is-one-quarter-tablet is-one-fifth-widescreen">
                 <div class="card product-card">
                   <div class="card-image">
                     <figure class="image is-4by3">
@@ -47,7 +47,7 @@ class OfertasBase extends React.Component {
                   <div class="card-content">
                     <div class="media">
                       <div class="media-content">
-                        <h5 class="product-title title is-4 has-text-weight-bold">{oferta.name} <br/> <span className="tag is-small is-light">Vendido Por: Reina Caceres</span></h5>
+                        <h5 class="product-title title is-5 has-text-weight-bold">{oferta.name} <br/> <span className="tag is-small is-light">Vendido Por: Reina Caceres</span></h5>
                         <div className="tags">
                         </div>
                       </div>
