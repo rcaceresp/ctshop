@@ -55,8 +55,9 @@ class Menu extends React.Component {
           {/* Menu Items */}
           <div className={`navbar-menu ${menuIsOpenClassString} is-light`}>
             <div className="navbar-start">
-              <Link to={ROUTES.HOME} className="navbar-item"><b>Inicio</b></Link>
-              <Link to={ROUTES.HOME} className="navbar-item"><b>Tiendas</b></Link>
+              {/* <Link to={ROUTES.HOME} className="navbar-item"><b>Inicio</b></Link> */}
+              <Link to={ROUTES.HOME} className="navbar-item"><b>Empieza a vender</b></Link>
+              <Link to={ROUTES.HOME} className="navbar-item"><b>¿Como funciona?</b></Link>
             </div>
             <div className="navbar-end">
               <Link className="navbar-item is-link is-small" to="/cart"><i className="fa fa-shopping-cart" /></Link>
