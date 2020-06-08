@@ -19,6 +19,8 @@ class Firebase {
   };
   
   products = () => this.db.ref('products');
+  companies = () => this.db.ref('companies');
+  
 }
 
 export default Firebase;

@@ -1,6 +1,7 @@
 .product-title {
   margin-bottom: 0rem !important;
   line-height: 1.5;
+  text-decoration: underline;
 
   @media only screen and (min-width: 500px) {
     max-width: 220px;
@@ -13,8 +14,16 @@
 .product-card {
   border-radius: 10px;
 
+  .offerPrice {
+    text-decoration: line-through;
+  }
+
   .media-content {
     overflow-x: inherit;
+  }
+
+  hr {
+    margin: .5rem 0;;
   }
 
   &:hover {

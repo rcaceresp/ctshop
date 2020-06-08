@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useParams} from 'react-router-dom';
  
 import Navigation from '../../components/navigation';
 import Footer from '../../components/footer';
@@ -11,6 +11,7 @@ import Home from '../../pages/home';
 import Signup from '../../pages/signup';
 import Signin from '../../pages/signin';
 import Account from '../../pages/account';
+import ProductDetail from '../../pages/productDetail';
 
 class App extends React.Component {
   
@@ -23,11 +24,20 @@ class App extends React.Component {
           <Route exact path={ROUTES.SIGN_UP} component={Signup} />
           <Route exact path={ROUTES.SIGN_IN} component={Signin} />
           <Route exact path={ROUTES.ACCOUNT} component={Account} />
+          <Switch>
+            <Route path="/producto/:owner/:product" children={<ProductLoader />} />
+          </Switch>
         </div>
         <Footer/>
       </Router>
     );
   }
+}
+
+function ProductLoader() {
+  let { owner, product } = useParams();
+
+  return (<ProductDetail owner={owner} product={product}/>);
 }
 
 export default withAuthentication(App);

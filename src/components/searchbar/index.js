@@ -18,7 +18,6 @@ const type = () => {
 };
 
 class SearchBar extends React.Component {
-
   componentDidMount(){
     type();
   }
@@ -29,10 +28,12 @@ class SearchBar extends React.Component {
         <div className="container">
           <div className="columns is-centered">
             <div className="column is-two-thirds has-text-centered">
-              <p className="has-text-centered">
+              {!this.props.noText && <React.Fragment>
+                <p className="has-text-centered">
                 <span> <b>¿Qu&eacute; estas buscando?</b></span>
               </p>
               <h1 className="title is-1 typewriter-show has-text-weight-bold">Computadoras</h1>
+              </React.Fragment>}
               <div className="field has-addons">
                 <div className="control is-expanded has-icons-left">
                   <input

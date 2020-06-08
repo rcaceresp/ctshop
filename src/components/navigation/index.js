@@ -42,7 +42,7 @@ class Menu extends React.Component {
         {authUser => <nav className="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
             <a className="navbar-item" href="/">
-              <img src="logo.png" height="28" alt="CatrachosShop"/>
+              <img src="/logo.png" height="28" alt="CatrachosShop"/>
             </a>
 
             <a href="##" onClick={toggleMenu} role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

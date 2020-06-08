@@ -1,6 +1,8 @@
 import React from 'react';
 import { withFirebase } from '../../vendor/firebase';
 import { normalizeProducts } from '../../utils/products';
+import Product from '../productCard';
+
 
 class OfertasBase extends React.Component {
   constructor(props) {
@@ -37,32 +39,7 @@ class OfertasBase extends React.Component {
           <hr/>
           <div className="row">
             <div className="columns is-multiline is-mobile">
-              {ofertas && ofertas.length && ofertas.map( oferta => <div className="column is-two-fifth-mobile is-one-quarter-tablet is-one-fifth-widescreen">
-                <div class="card product-card">
-                  <div class="card-image">
-                    <figure class="image is-4by3">
-                      <img src={oferta.images[0]} alt="Catrachos Shop" />
-                    </figure>
-                  </div>
-                  <div class="card-content">
-                    <div class="media">
-                      <div class="media-content">
-                        <h5 class="product-title title is-5 has-text-weight-bold">{oferta.name} <br/> <span className="tag is-small is-light">Vendido Por: Reina Caceres</span></h5>
-                        <div className="tags">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="content">
-                      <hr/>
-                      <div className="buttons is-centered">
-                        <button className="button is-warning is-rounded is-small has-text-weight-bold">
-                          <span className="icon"><i className="fa fa-eye"/></span><span>Ver</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>)}
+              {ofertas && ofertas.length && ofertas.map( oferta => <Product product={oferta}/>)}
             </div>{/*  Columns */}
           </div>
         </div>

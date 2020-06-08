@@ -9,5 +9,7 @@
 @import '~bulma/bulma';
 
 // Components
+@import 'components/general';
 @import 'components/searchbar';
 @import 'components/productcard';
+@import "~react-image-gallery/styles/scss/image-gallery.scss";

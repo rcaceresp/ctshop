@@ -7,10 +7,24 @@ export const normalizeProducts = data => {
       const productosKeys = Object.keys( data[negocio] );
 
       productosKeys.forEach( producto => {
-        productos.push( data[negocio][producto] );
+
+        data[negocio][producto]['price'] = Number(data[negocio][producto]['price']);
+        const product = {_id: producto,...data[negocio][producto], negocio};
+
+        productos.push( product );
       });
     });
   }
 
   return productos;
 };
+
+export const priceWithDiscount = (price = 0, discount = 0) => {
+
+  return {
+    original: price,
+    discountedPrice: discount ? (price - ( price * (discount / 100 ))) : price
+  };
+};
+
+export const formatMoney = (num) => Number(num).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
