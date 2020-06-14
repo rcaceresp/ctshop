@@ -82,8 +82,8 @@ const buildPage = (company, product) => (
         <ProductPrice price={product.price} discount={ product.oferta ? product.oferta.porcentaje : null } />
         <hr/>
         <p className="has-text-centered">
-          <small>Elige la cantidad:</small> <br/>
-          <NumericInput className="input" step={1} min={1} value={1} size="small"/>
+          <small><b>Cantidad:</b></small> <br/>
+          <NumericInput className="input" step={1} min={1} value={1} size={3}/>
         </p>
         <br/><br/>
         <div className="buttons is-centered">
