@@ -2,6 +2,7 @@ import React from 'react';
 import { withFirebase } from '../../vendor/firebase';
 import { normalizeProducts } from '../../utils/products';
 import Product from '../productCard';
+import Loaderb from '../loader/bversion';
 
 
 class OfertasBase extends React.Component {
@@ -9,7 +10,8 @@ class OfertasBase extends React.Component {
     super(props);
 
     this.state = {
-      ofertas: null
+      ofertas: null,
+      isLoading: true
     };
   }
 
@@ -23,30 +25,36 @@ class OfertasBase extends React.Component {
         // ofertas = ofertas.filter( oferta => oferta.hasOffer );
 
         if (ofertas.length) {
-          this.setState({ ofertas });
+          this.setState({ ofertas, isLoading: false });
         } 
       }
     });
   }
 
   render() {
-    const { ofertas } = this.state;
-
+    const { ofertas, isLoading } = this.state;
+    
     return (
-      <section className="section">
-        <div className="container">
-          <h4 className="title is-2 has-text-weight-bold">Ofertas</h4>
-          <hr/>
-          <div className="row">
-            <div className="columns is-multiline is-mobile">
-              {ofertas && ofertas.length && ofertas.map( oferta => <Product product={oferta}/>)}
-            </div>{/*  Columns */}
-          </div>
-        </div>
-      </section>
+      <React.Fragment>
+        {showContent(isLoading, ofertas)}
+      </React.Fragment>
     );
   }
 }
+
+const showContent = (isLoading, ofertas) => {
+  return isLoading ? <section className="section"><Loaderb /></section> : <section className="section">
+    <div className="container">
+      <h4 className="title is-2 has-text-weight-bold">Ofertas</h4>
+      <hr/>
+      <div className="row">
+        <div className="columns is-multiline is-mobile">
+          {ofertas && ofertas.length && ofertas.map( oferta => <Product product={oferta}/>)}
+        </div>{/*  Columns */}
+      </div>
+    </div>
+  </section>;
+};
 
 const Ofertas = withFirebase(OfertasBase);
 

@@ -5,7 +5,7 @@ import ImageGallery from 'react-image-gallery';
 import SearchBar from '../../components/searchbar';
 import ProductPrice from '../../components/productPrice';
 import NumericInput from 'react-numeric-input';
-
+import AddToCartBtn from '../../components/addToCartBtn';
 
 class ProductDetailPageBase extends React.Component {
   constructor(props) {
@@ -14,14 +14,15 @@ class ProductDetailPageBase extends React.Component {
     this.state = {
       company: null,
       product: null,
-      loading: true
+      loading: true,
+      qty: 1
     };
+
+    this.increaseQty = this.increaseQty.bind(this);
   }
 
   async componentDidMount() {
     let {owner = null, product = null } = this.props;
-
-    console.log({owner, product})
     
     if (owner && product) {
       try {
@@ -30,6 +31,9 @@ class ProductDetailPageBase extends React.Component {
 
         company = company.val();
         prd = prd.val();
+
+        company._id = owner;
+        prd._id = product;
 
         prd.images = prd.images.map( image => { return { original: image, thumbnail: image }});
 
@@ -40,8 +44,12 @@ class ProductDetailPageBase extends React.Component {
     }
   }
 
+  increaseQty(qty) {
+    this.setState({ qty });
+  }
+
   render() {
-    const { company, product} = this.state;
+    const { company, product, qty} = this.state;
 
     return (
       <React.Fragment>
@@ -49,7 +57,7 @@ class ProductDetailPageBase extends React.Component {
         <section className="section">
           <div className="container">
             {this.state.loading && <Loader withMessage={false} />}
-            {!this.state.loading && buildPage(company, product)}
+            {!this.state.loading && buildPage(company, product, qty, this.increaseQty) }
           </div>
         </section>
       </React.Fragment>
@@ -57,7 +65,7 @@ class ProductDetailPageBase extends React.Component {
   }
 }
 
-const buildPage = (company, product) => (
+const buildPage = (company, product, qty, increaseQty) => (
   <div className="row">
     <div className="columns is-centered">
       <div className="column is-two-fifths">
@@ -70,10 +78,10 @@ const buildPage = (company, product) => (
         />
       </div>
       <div className="column is-one-third">
-        <small><a href="">{product.cat}</a> / {product.name}</small>
+        <small><a href="/">{product.cat}</a> / {product.name}</small>
         <h1 className="title is-3 is-bold has-text-black has-text-weight-bold ">
           {product.name} <br/>
-          <span className="tag is-small is-white">Vendido Por: </span><span className="tag is-small is-light"><a href="">{company.company}</a></span>
+          <span className="tag is-small is-white">Vendido Por: </span><span className="tag is-small is-light"><a href="/">{company.company}</a></span>
         </h1>
         <hr/>
         <p>{product.desc}</p>
@@ -83,14 +91,10 @@ const buildPage = (company, product) => (
         <hr/>
         <p className="has-text-centered">
           <small><b>Cantidad:</b></small> <br/>
-          <NumericInput className="input" step={1} min={1} value={1} size={3}/>
+          <NumericInput className="input" step={1} min={1} max={Number(product.stock)} value={qty} size={3} onChange={ (van) => increaseQty(van)}/>
         </p>
         <br/><br/>
-        <div className="buttons is-centered">
-          <button className="button is-danger is-small has-text-weight-bold">
-            <span className="icon"><i className="fa fa-cart-plus"/></span> <span>Agregar al Carrito</span>
-          </button>
-        </div>
+        <AddToCartBtn vendor={company} product={product} qty={qty} stock={product.stock} />
       </div>
     </div>
   </div>

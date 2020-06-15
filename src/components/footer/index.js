@@ -3,8 +3,8 @@ import React from 'react'
  const Footer = () => {
      const footerIconWidth = 30;
     return (
-        <footer class="footer">
-            <div class="content has-text-centered">
+        <footer className="footer">
+            <div className="content has-text-centered">
                 <div className="row">
                     <div className="columns">
                         <div className="column">

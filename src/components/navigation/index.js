@@ -56,11 +56,11 @@ class Menu extends React.Component {
           <div className={`navbar-menu ${menuIsOpenClassString} is-light`}>
             <div className="navbar-start">
               {/* <Link to={ROUTES.HOME} className="navbar-item"><b>Inicio</b></Link> */}
-              <Link to={ROUTES.HOME} className="navbar-item"><b>Empieza a vender</b></Link>
+              <a href="https://admin.catrachosshop.com/" target="_blank" rel="noopener noreferrer" className="navbar-item"><b>Empieza a vender</b></a>
               <Link to={ROUTES.HOME} className="navbar-item"><b>¿Como funciona?</b></Link>
             </div>
             <div className="navbar-end">
-              <Link className="navbar-item is-link is-small" to="/cart"><i className="fa fa-shopping-cart" /></Link>
+              <Link className="navbar-item is-link is-small" to="/carrito"><i className="fa fa-shopping-cart" /></Link>
               {!authUser && <Link to={ROUTES.SIGN_UP} className="navbar-item is-link is-small">
                 <span className="icon"><i className="fa fa-id-badge"/></span><b>Registrate</b>
               </Link>}
