@@ -12,7 +12,7 @@ const CartItem = props => {
             <img src={images[0]} alt={name} className="cart-item-img"/>
           </div>
           <div className="column">
-            <h2 className="title is-4 has-text-weight-bold"><a className="product-title" href={`/${companyID}/${productID}`}>{name}</a></h2>
+            <h2 className="title is-4 has-text-weight-bold"><a className="product-title" href={`/producto/${companyID}/${productID}`}>{name}</a></h2>
             <p className="has-text-black">{desc}</p>
           </div>
           <div className="column">
