@@ -13,6 +13,7 @@ import Signup from '../../pages/signup';
 import Signin from '../../pages/signin';
 import Account from '../../pages/account';
 import ProductDetail from '../../pages/productDetail';
+import About from '../../pages/about';
 
 class App extends React.Component {
   
@@ -26,6 +27,7 @@ class App extends React.Component {
           <Route exact path={ROUTES.SIGN_UP} component={Signup} />
           <Route exact path={ROUTES.SIGN_IN} component={Signin} />
           <Route exact path={ROUTES.ACCOUNT} component={Account} />
+          <Route exact path={ROUTES.ABOUT_US} component={About} />
           <Switch>
             <Route path="/producto/:owner/:product" children={<ProductLoader />} />
           </Switch>
