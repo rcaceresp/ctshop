@@ -19,11 +19,11 @@ export const normalizeProducts = data => {
   return productos;
 };
 
-export const priceWithDiscount = (price = 0, discount = 0) => {
+export const priceWithDiscount = (price = 0, discount = null) => {
 
   return {
-    original: price,
-    discountedPrice: discount ? (price - ( price * (discount / 100 ))) : price
+    original: Number(price),
+    discountedPrice: discount ? (Number(price) - ( Number(price) * (Number(discount) / 100 ))) : Number(price)
   };
 };
 
