@@ -12,8 +12,10 @@ import Cart from '../../pages/cart';
 import Signup from '../../pages/signup';
 import Signin from '../../pages/signin';
 import Account from '../../pages/account';
-import ProductDetail from '../../pages/productDetail';
+import ProductDetailPage from '../../pages/productDetail';
+import TiendaDetailPage from '../../pages/tiendaDetail';
 import About from '../../pages/about';
+import Tiendas from '../../pages/tiendas';
 
 class App extends React.Component {
   
@@ -28,8 +30,10 @@ class App extends React.Component {
           <Route exact path={ROUTES.SIGN_IN} component={Signin} />
           <Route exact path={ROUTES.ACCOUNT} component={Account} />
           <Route exact path={ROUTES.ABOUT_US} component={About} />
+          <Route exact path={ROUTES.AFILLIATES} component={Tiendas} />
           <Switch>
             <Route path="/producto/:owner/:product" children={<ProductLoader />} />
+            <Route path="/tienda/:tienda" children={<TiendaLoader />} />
           </Switch>
         </div>
         <Footer/>
@@ -41,7 +45,13 @@ class App extends React.Component {
 function ProductLoader() {
   let { owner, product } = useParams();
 
-  return (<ProductDetail owner={owner} product={product}/>);
+  return (<ProductDetailPage owner={owner} product={product}/>);
+}
+
+function TiendaLoader() {
+  let { tienda } = useParams();
+
+  return (<TiendaDetailPage tienda={tienda} />);
 }
 
 export default withAuthentication(App);

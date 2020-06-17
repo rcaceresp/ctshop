@@ -8,12 +8,12 @@ const About = () => {
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title">
-                            <h1 className="title is-h1"><b>¿C&oacute;mo funciona Catrachos Shop?</b></h1>
+                            <h1 className="title is-1 has-text-centered"><b>¿C&oacute;mo funciona Catrachos Shop?</b></h1>
                         </h1>
                     </div>
                 </div>
             </section>
-            <div className="columns">
+            <div className="columns is-centered">
                 <div class="column is-two-thirds">
                     <p> <a href="/"><b>Catrachos Shop</b></a> es una plataforma de tiendas online para micro, 
                     peque&ntilde;a y medianas empresas donde nuestros afiliados ofrecen sus productos

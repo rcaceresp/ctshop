@@ -9,15 +9,32 @@ const Home = props => {
     <React.Fragment>
       <SearchBar/>
       <Ofertas/>
+      <hr/>
       <section className="section">
         <div className="container">
-          <div className="card">
-            <div className="card-content">
-              <h3 className="title is-3">Catrachos Shop</h3>
-              <hr/>
-              <p>Es una plataforma de tiendas online para las MIPYMES (micro, pequeña y mediana empresa) donde nuestros afiliados podrán ofrecer sus productos o servicios a través de la red de la misma manera que comercializan en su tienda física. Esta herramienta brinda la posibilidad de expandir sus negocios, ampliar su mercado y de aprovechar las ventajas de un comercio virtual.</p>
-              <p>Puedes crear tu tienda online, configurarla, describir los productos y añadir imágenes en cuestión de minutos. Tus clientes pueden pagar con tarjeta de crédito/débito o PayPal. Solo debes suscribirte y elegir uno de los diferentes planes para empezar a comercializar. Vender en línea puede ser muy fácil.</p>
-              <p>¡Suscríbete! <br/>Y crea tu tienda online hoy mismo. Comienza a vender por Internet.</p>
+          <div className="row">
+            <div className="columns is-centered">
+              <div className="column is-three-fifths">
+                <h1 className="title is-3 has-text-centered"><b>¿C&oacute;mo funciona Catrachos Shop?</b></h1>
+                <hr/>
+                <p><a href="/"><b>Catrachos Shop</b></a> es una plataforma de tiendas online para micro, peque&ntilde;a y medianas empresas donde nuestros afiliados ofrecen sus productos a trav&eacute;s de la herramienta de la misma manera que comercializan en su tienda f&iacute;sica. Aqu&iacute; encontrar&aacute;s una diversidad de productos y empresas locales que se adapta a lo que buscas.  Apoya la creatividad, el dise&ntilde;o y la innovaci&oacute;n de estos empresarios.</p>
+                <hr />
+                <p>Estos son algunos datos que debes conocer sobre como funciona <a href="/"><b>Catrachos Shop</b></a>:</p>
+                <ul>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Reg&iacute;strate.</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Revisa el cat&aacute;logo de productos de las tiendas o busca lo que necesitas.</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Agrega al carrito de compras los art&iacute;culos que deseas comprar.</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Completa un formulario con tu informaci&oacute;n de facturaci&oacute;n.</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Selecciona un m&eacute;todo de pago ya sea con tarjeta de cr&eacute;dito/d&eacute;bito o PayPal.</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> Pasa por t&uacute; compra o coordina con la empresa para realizar el env&iacute;o.</li>
+                </ul>
+                <hr />
+                <p className="has-text-centered"><b>¡Apoya a las empresas locales!</b></p>
+                <br />
+              </div>
+              <div className="column">
+                <img src="/store.svg" alt="catrashosshop.com" width="500"/>
+              </div>
             </div>
           </div>
         </div> {/*  Container */}

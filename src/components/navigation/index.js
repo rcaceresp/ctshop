@@ -57,7 +57,8 @@ class Menu extends React.Component {
             <div className="navbar-start">
               {/* <Link to={ROUTES.HOME} className="navbar-item"><b>Inicio</b></Link> */}
               <a href="https://admin.catrachosshop.com/" target="_blank" rel="noopener noreferrer" className="navbar-item"><b>Empieza a vender</b></a>
-              <Link to={ROUTES.HOME} className="navbar-item"><b>¿Como funciona?</b></Link>
+              <Link to={ROUTES.ABOUT_US} className="navbar-item"><b>¿Como funciona?</b></Link>
+              <Link to={ROUTES.AFILLIATES} className="navbar-item"><b>Nuestas Tiendas</b></Link>
             </div>
             <div className="navbar-end">
               <Link className="navbar-item is-link is-small" to="/carrito"><i className="fa fa-shopping-cart" /></Link>

@@ -16,18 +16,21 @@ class OfertasBase extends React.Component {
   }
 
   componentDidMount() {
-    this.props.firebase.products().once('value').then( snapshot => {
+    this.props.firebase.products().limitToFirst(5).once('value').then( snapshot => {
       const resp = snapshot.val();
 
       if (resp !== null) {
         let ofertas = normalizeProducts(resp);
 
-        // ofertas = ofertas.filter( oferta => oferta.hasOffer );
+        ofertas = ofertas.filter( oferta => oferta.hasOffer );
 
         if (ofertas.length) {
-          this.setState({ ofertas, isLoading: false });
-        } 
+          this.setState({ ofertas });
+        }
+
       }
+
+      this.setState({isLoading: false});
     });
   }
 
@@ -42,7 +45,7 @@ class OfertasBase extends React.Component {
   }
 }
 
-const showContent = (isLoading, ofertas) => {
+const showContent = (isLoading = true, ofertas = null) => {
   return isLoading ? <section className="section"><Loaderb /></section> : <section className="section">
     <div className="container">
       <h4 className="title is-2 has-text-weight-bold">Ofertas</h4>
@@ -50,6 +53,7 @@ const showContent = (isLoading, ofertas) => {
       <div className="row">
         <div className="columns is-multiline is-mobile">
           {ofertas && ofertas.length && ofertas.map( oferta => <Product product={oferta}/>)}
+          {!ofertas && <p className="has-text-center">No hay ofertas</p>}
         </div>{/*  Columns */}
       </div>
     </div>
