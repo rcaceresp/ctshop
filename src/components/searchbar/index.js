@@ -35,6 +35,16 @@ class SearchBar extends React.Component {
               <h1 className="title is-1 typewriter-show has-text-weight-bold">Computadoras</h1>
               </React.Fragment>}
               <div className="field has-addons">
+                <p class="control">
+                  <span className="select is-danger is-rounded has-text-centered">
+                    <select>
+                      <option>Ropa</option>
+                      <option>Computadoras</option>
+                      <option>Deporte</option>
+                      <option>Cuidado Personal</option>
+                    </select>
+                  </span>
+                </p>
                 <div className="control is-expanded has-icons-left">
                   <input
                     className="input is-danger is-rounded"

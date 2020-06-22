@@ -1,7 +1,7 @@
 .product-title {
   margin-bottom: 0rem !important;
   line-height: 1.5;
-  text-decoration: underline;
+  text-align: center;
 
   @media only screen and (min-width: 500px) {
     max-width: 220px;
@@ -14,6 +14,16 @@
 .product-card {
   border-radius: 10px;
   box-shadow: none;
+
+  .product-figure {
+    overflow: hidden;
+
+    img {
+      height: auto !important;
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
 
   .offerPrice {
     text-decoration: line-through;
@@ -28,8 +38,9 @@
   }
 
   &:hover {
-    transform: scale(1.05);
-    transition: all .4s ease-in-out;
+    // border: 1px solid #cecece;
+    transform: scale(1.03);
+    transition: all .1s ease-in-out;
     transition-timing-function: ease-in-out;
     cursor: pointer;
   }

@@ -1,3 +1,11 @@
 .has-strike-text {
   text-decoration: line-through;
 }
+
+.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+  height: 60px !important;
+}
+
+.image-gallery-icon:hover {
+  color: #536dfe !important;
+}

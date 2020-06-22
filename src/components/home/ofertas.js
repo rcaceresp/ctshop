@@ -22,7 +22,7 @@ class OfertasBase extends React.Component {
       if (resp !== null) {
         let ofertas = normalizeProducts(resp);
 
-        ofertas = ofertas.filter( oferta => oferta.hasOffer );
+        // ofertas = ofertas.filter( oferta => oferta.hasOffer );
 
         if (ofertas.length) {
           this.setState({ ofertas });
@@ -48,7 +48,7 @@ class OfertasBase extends React.Component {
 const showContent = (isLoading = true, ofertas = null) => {
   return isLoading ? <section className="section"><Loaderb /></section> : <section className="section">
     <div className="container">
-      <h4 className="title is-2 has-text-weight-bold">Ofertas</h4>
+      <h4 className="title is-4 has-text-weight-bold">Ofertas</h4>
       <hr/>
       <div className="row">
         <div className="columns is-multiline is-mobile">

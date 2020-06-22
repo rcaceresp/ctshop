@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const TiendasCard = props => {
-  const { _id, company, tel, images = null } = props.data;
+  const { _id, company, images = null } = props.data;
   const image = images && images.trim().length ? images : '/no-img.png';
 
   return(
@@ -15,10 +15,10 @@ const TiendasCard = props => {
         </div>
         <div class="card-content">
           <div class="content">
-            <Link to={`/tienda/${_id}`}><h5 class="product-title title is-5 has-text-weight-bold">{company}</h5></Link>
+            <Link to={`/tienda/${_id}`}><h5 class="product-title title is-6 has-text-weight-bold has-text-centered">{company}</h5></Link>
             <br/>
             <div className="buttons is-centered">
-              <div className="button is-danger is-small"><b>Ver productos</b></div>
+              <Link to={`/tienda/${_id}`} className="button is-danger is-small"><b>Ver productos</b></Link>
             </div>
           </div>
         </div>

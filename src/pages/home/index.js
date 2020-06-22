@@ -3,12 +3,19 @@ import SearchBar from '../../components/searchbar';
 
 // Custom Components
 import Ofertas from '../../components/home/ofertas';
+import Stores from '../../components/home/afiliados';
 
 const Home = props => {
   return(
     <React.Fragment>
       <SearchBar/>
+      <section className="section">
+      <div className="container has-text-centered">
+        <img src="/banner.jpeg" style={{maxWidth: 800}}/> 
+      </div>
+      </section>
       <Ofertas/>
+      <Stores/>
       <hr/>
       <section className="section">
         <div className="container">

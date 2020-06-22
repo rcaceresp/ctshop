@@ -11,38 +11,31 @@ class AddToCartBtn extends React.Component {
     this.addToCart = this.addToCart.bind(this);
   }
 
-  addToCart(vendor, product, qty) {
+  addToCart(vendor, product, qty, sizeSelected) {
     const _cart = getFromLocalStorage();
+    const productToAdd = { _id: product._id, qty, sizeSelected };
 
-    _cart[vendor._id] = _cart[vendor._id] ? _cart[vendor._id] : [];
+    _cart['cart'][vendor._id] = _cart['cart'][vendor._id] ? _cart['cart'][vendor._id] : [];
 
-    console.log(_cart[vendor._id].length);
+    const existsInCartIndex = _array.findIndex(_cart['cart'][vendor._id], item => item._id === product._id);
 
-    if (_cart[vendor._id].length === 0) {
-      
-      _cart[vendor._id].push({ _id: product._id, qty });
+    if (existsInCartIndex !== -1) {
+      _cart['cart'][vendor._id][existsInCartIndex]= productToAdd;
     } else {
-      const existsInCartIndex = _array.findIndex(_cart[vendor._id], item => item._id === product._id);
-
-      if (existsInCartIndex !== -1) {
-        _cart[vendor._id][existsInCartIndex].qty = qty;
-      } else {
-        _cart[vendor._id].push({ _id: product._id, qty });
-      }
+      _cart['cart'][vendor._id].push(productToAdd);
     }
 
     setToLocalStorage('_cart', _cart, () => window.location = '/carrito');
   }
 
   render() {
-    const {vendor, product, qty, stock} = this.props;
-    const isOutOfStock = Number(stock) === 0 || product.outStock === true;
+    const {vendor, product, qty, sizeSelected = false} = this.props;
 
     return(
       <React.Fragment>
-        {isOutOfStock && <p className="has-text-centered has-text-danger"><b>Agotado</b></p>}
+        {/* {isOutOfStock && <p className="has-text-centered has-text-danger"><b>Agotado</b></p>} */}
         <div className="buttons is-centered">
-          <button className="button is-danger is-small has-text-weight-bold" onClick={e => this.addToCart(vendor, product, qty, stock)} disabled={isOutOfStock}>
+          <button className="button is-danger is-small has-text-weight-bold" onClick={e => this.addToCart(vendor, product, qty, sizeSelected)}>
             <span className="icon"><i className="fa fa-cart-plus"/></span> <span>Agregar al Carrito</span>
           </button>
         </div>
