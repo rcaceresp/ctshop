@@ -47,7 +47,6 @@ class TiendaDetailPageBase extends React.Component {
       this.setState({isLoading:false});
     }
   }
-    
 
   render() {
     return (

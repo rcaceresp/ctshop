@@ -16,18 +16,18 @@ class OfertasBase extends React.Component {
   }
 
   componentDidMount() {
-    this.props.firebase.products().limitToFirst(5).once('value').then( snapshot => {
+    this.props.firebase.products().once('value').then( snapshot => {
       const resp = snapshot.val();
 
       if (resp !== null) {
         let ofertas = normalizeProducts(resp);
 
-        // ofertas = ofertas.filter( oferta => oferta.hasOffer );
+        ofertas = ofertas.filter( oferta => (oferta && oferta.descuento && oferta.descuento.porcentaje > 0) );
 
         if (ofertas.length) {
+          ofertas = ofertas.slice(0,5);
           this.setState({ ofertas });
         }
-
       }
 
       this.setState({isLoading: false});

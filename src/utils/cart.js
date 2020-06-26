@@ -52,12 +52,12 @@ export const getFromLocalStorage = (key = '_cart') => {
     const _dataByte = crypto.AES.decrypt(localStorage[key], internals.appKey);
     let decryptedData = JSON.parse(_dataByte.toString(crypto.enc.Utf8));
 
-    console.log('the key', crypto.AES.decrypt('U2FsdGVkX1920CLY1VcU8sudABPV1V5qZiYNo/jR8V4l/rlM6V1k1PCfd14RAVSxdA9ZuE2KBy8olpOd4bRLe8mtrFhzW1Q0SognM3ZsI8meaVgyRa+TpnzWAYP9YOMo3tKGeRddabmNDCi/pxBD/+oe++wyHg6nbjV/tLItaNHnRHOqWMSjvFKufCcVnTrE', internals.appKey).toString(crypto.enc.Utf8) );
+    // console.log('the key', crypto.AES.decrypt('U2FsdGVkX1920CLY1VcU8sudABPV1V5qZiYNo/jR8V4l/rlM6V1k1PCfd14RAVSxdA9ZuE2KBy8olpOd4bRLe8mtrFhzW1Q0SognM3ZsI8meaVgyRa+TpnzWAYP9YOMo3tKGeRddabmNDCi/pxBD/+oe++wyHg6nbjV/tLItaNHnRHOqWMSjvFKufCcVnTrE', internals.appKey).toString(crypto.enc.Utf8) );
 
     // Check current key
     decryptedData = (decryptedData.ckey && decryptedData.ckey === config._cartID) ? decryptedData : cart_template;
 
-    console.log(decryptedData.ckey && decryptedData.ckey === config._cartID);
+    // console.log(decryptedData.ckey && decryptedData.ckey === config._cartID);
 
     return decryptedData;
   } catch(e) {
@@ -96,7 +96,7 @@ export const getCartWithData = async (fb) => {
     })).then( () => console.log('All data fetched'));
 
     shipping = Array.from(new Set(shipping)).reduce( (accum, item) => accum + item, 0);
-    console.log(_cart);
+    // console.log(_cart);
     
     return {products, shipping, originalCart: _cart};
   } catch(e) {

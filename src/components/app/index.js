@@ -14,6 +14,8 @@ import Signin from '../../pages/signin';
 import Account from '../../pages/account';
 import ProductDetailPage from '../../pages/productDetail';
 import TiendaDetailPage from '../../pages/tiendaDetail';
+import ConfirmationPage from '../../pages/confirmation';
+import BusquedaPage from '../../pages/busqueda';
 import About from '../../pages/about';
 import Tiendas from '../../pages/tiendas';
 
@@ -31,9 +33,11 @@ class App extends React.Component {
           <Route exact path={ROUTES.ACCOUNT} component={Account} />
           <Route exact path={ROUTES.ABOUT_US} component={About} />
           <Route exact path={ROUTES.AFILLIATES} component={Tiendas} />
+          <Route exact path={ROUTES.BUSQUEDA} component={BusquedaPage} />
           <Switch>
             <Route path="/producto/:owner/:product" children={<ProductLoader />} />
             <Route path="/tienda/:tienda" children={<TiendaLoader />} />
+            <Route path="/confirmacion/:order" children={<ConfirmationLoader />} />
           </Switch>
         </div>
         <Footer/>
@@ -52,6 +56,12 @@ function TiendaLoader() {
   let { tienda } = useParams();
 
   return (<TiendaDetailPage tienda={tienda} />);
+}
+
+function ConfirmationLoader() {
+  let { order } = useParams();
+
+  return (<ConfirmationPage order={order} />)
 }
 
 export default withAuthentication(App);

@@ -11,7 +11,7 @@ const Home = props => {
       <SearchBar/>
       <section className="section">
       <div className="container has-text-centered">
-        <img src="/banner.jpeg" style={{maxWidth: 800}}/> 
+        <img src="/banner.jpeg" style={{maxWidth: 800}} alt="Catrachoshop.com"/> 
       </div>
       </section>
       <Ofertas/>

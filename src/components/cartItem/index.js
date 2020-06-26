@@ -14,7 +14,7 @@ const CartItem = props => {
             <img src={images[0]} alt={name} className="cart-item-img"/>
           </div>
           <div className="column">
-            <a href="/" className="has-text-black"><small>Vendido por: <div className="tag is-light"><b>{companyName}</b></div></small></a>
+            <a href={`/tienda/${companyID}`} className="has-text-black"><small>Vendido por: <div className="tag is-light"><b>{companyName}</b></div></small></a>
             <p className="title is-4 has-text-weight-bold has-text-link-dark">
               <a className="has-text-link-dark " href={`/producto/${companyID}/${productID}`}>{name}</a>
               <br/><div className="tags">
@@ -25,9 +25,9 @@ const CartItem = props => {
           </div>
           <div className="column">
             <ProductPrice price={price} discount={ oferta ? oferta.porcentaje : null } isCard={true} />
-            <div className="buttons is-centered">
+            {props.deleteFromCart !== null && <div className="buttons is-centered">
               <button onClick={e => props.deleteFromCart({productID, companyID})} className="button is-danger is-small "><span className="icon"><i className="fa fa-trash"/></span> <span>Remover</span></button>
-            </div>
+            </div>}
           </div>
         </div>
       </div>

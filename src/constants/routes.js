@@ -6,3 +6,4 @@ export const CART = '/carrito';
 export const FAQS = '/faqs';
 export const ABOUT_US = '/acerca';
 export const AFILLIATES = '/afiliados';
+export const BUSQUEDA = '/resultados';
