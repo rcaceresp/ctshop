@@ -1,4 +1,4 @@
-export const categories = {
+const categories = {
   "cuidadop": "Cuidado Personal",
   "deporte" : "Deporte",
   "electrodomesticos": "Electrodomésticos",
@@ -9,3 +9,5 @@ export const categories = {
   "mundob": "Mundo del Bebé",
   "calzado": "Calzado"
 };
+
+export const getCategory = (key = '') => key in categories ? categories[key] : 'Todas';

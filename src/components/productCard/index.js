@@ -3,7 +3,7 @@ import ProductPrice from '../../components/productPrice';
 import { Link } from 'react-router-dom';
 
 const ProductCard = props => {
-  const { name, price, images, descuento: oferta = null, negocio, _id  } = props.product;
+  const { name, price, images, descuento: oferta = null, negocio, _id, vendedorName= ''  } = props.product;
 
   return(
     <div className="column is-two-fifth-mobile is-one-quarter-tablet is-one-fifth-widescreen">
@@ -16,7 +16,7 @@ const ProductCard = props => {
         <div className="card-content">
           <div className="content">
             <h5 className="product-title title is-6 has-text-weight-bold"><Link to={`/producto/${negocio}/${_id}`} className="has-text-black">{name}</Link>
-              <br/><span className="tag is-small is-light">Vendido Por: Reina Caceres</span>
+              <br/><span className="tag is-small is-light">Vendido Por: {vendedorName}</span>
             </h5>
             <hr/>
             <ProductPrice price={price} discount={ oferta ? oferta.porcentaje : null } isCard={true} />

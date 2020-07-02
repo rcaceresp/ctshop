@@ -16,6 +16,8 @@ export const normalizeProducts = data => {
     });
   }
 
+  console.log(productos);
+
   return productos;
 };
 

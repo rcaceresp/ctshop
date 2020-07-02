@@ -52,6 +52,8 @@ class CartPageBase extends React.Component {
           internals.totalItems = internals.totalItems + item.qty;
           internals.totalPrice = internals.totalPrice + (discountedPrice.discountedPrice * item.qty);
 
+          item['shipped'] = false;
+
           return item;
         });
       }
@@ -151,8 +153,11 @@ class CartPageBase extends React.Component {
             oc,
             stateShipping,
             ordertime: Date.now(),
-            orderTotal: totalPrice + stateShipping
-          };          
+            orderTotal: totalPrice + stateShipping,
+            paid: true,
+            _userid: userid,
+            status: 'pendiente'
+          };
 
           return actions.order.capture().then( async details => {
             try{
@@ -163,17 +168,29 @@ class CartPageBase extends React.Component {
                   createTime: details.create_time,
                   updateTime: details.update_time
                 };
-                const orderTransaction = await this.props.firebase.db.ref(`users/${userid}/orders/${clientOrder.orderId}`).set({ ...clientOrder });
+                await this.props.firebase.db.ref(`users/${userid}/orders/${clientOrder.orderId}`).set({ ...clientOrder });
+                const vendors = Object.keys(clientOrder.oc.cart);
 
-                console.log(orderTransaction);
+                await Promise.all( vendors.map( async vendor => {
+                  const store = {...clientOrder};
 
-                this.props.history.push({
-                  pathname: `/confirmacion/${clientOrder.orderId}`,
-                  state: {}
+                  store.products = store.products.filter( product => product.vendor._id === vendor);
+                  store.totalPrice = store.products.reduce( (antVal, currentVal) => antVal + (currentVal.discountedPrice.discountedPrice * currentVal.qty), 0);
+                  store.shipping = store.shipping > 0 ? store.products[0].vendor.delivery_price : 0;
+                  store.orderTotal = store.totalPrice + store.shipping;
+                  store.totalItems = store.products.reduce( (acc, actual) => (acc + actual.qty), 0);
+
+                  await this.props.firebase.db.ref(`orders/${vendor}/${store.orderId}`).set({ ...store }); 
+                  
+                })).then( _ => {
+                  this.props.history.push({
+                    pathname: `/confirmacion/${clientOrder.orderId}`,
+                    state: {}
+                  });
                 });
+              } else {
+                console.log('unable to complete payment');
               }
-
-              console.log('unable to complete payment');
             } catch(e) {
               console.log(e.message);
             }

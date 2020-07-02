@@ -13,7 +13,7 @@ const type = () => {
 
     if (typeWriterEl) {
       const tw = new Typewriter(typeWriterEl, {
-        strings: ['Computadoras', 'Air Jordan', 'Apple', 'Cocina', 'Juguetes'],
+        strings: ['Accesorios', 'Calzado', 'Cuidado Personal', 'Deporte', 'Electrodomésticos', 'Electrónica', 'Escolar y Oficina', 'Hogar', 'Mundo del Bebé', 'Ropa'],
         autoStart: true,
         loop: true,
         cursor: '_',
@@ -94,6 +94,7 @@ class SearchBar extends React.Component {
                 <p class="control">
                   <span className="select is-danger is-rounded has-text-centered">
                     <select onChange={e => this._handleCategoryChange(e)} defaultValue={internals.query.category}>
+                      <option value="">Todos</option>
                       <option value="cuidadop">Cuidado Personal</option>
                       <option value="deporte">Deporte</option>
                       <option value="electrodomesticos">Electrodomésticos</option>

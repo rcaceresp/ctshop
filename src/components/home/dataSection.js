@@ -1,7 +1,7 @@
 import React from 'react';
 import Product from '../productCard';
 
-const Ofertas = props => {
+const DataSection = props => {
   return(
     <section className="section">
       <div className="container">
@@ -9,7 +9,7 @@ const Ofertas = props => {
         <hr/>
         <div className="row">
           <div className="columns is-multiline is-mobile">
-            {props.ofertas.map( oferta => <Product product={oferta}/>)}
+            {props.products.map( product => <Product product={product}/>)}
           </div>{/*  Columns */}
         </div>
       </div>
@@ -17,4 +17,4 @@ const Ofertas = props => {
   );
 };
 
-export default Ofertas;
+export default DataSection;

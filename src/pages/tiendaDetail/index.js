@@ -61,7 +61,10 @@ class TiendaDetailPageBase extends React.Component {
           {!this.state.isLoading && internals.products.length === 0 && <><p className="title is-5 has-text-centered">No hay productos por mostrar</p><div className="buttons is-centered"><a href="/" className="button is-danger is-rounded is-small">Volver al inicio</a></div></>}
           <div className="row">
             <div className="columns is-multiline is-mobile">
-              {!this.state.isLoading && internals.products.length > 0 && internals.products.map( (product, i) => <ProductCard key={`storeProduct-${i}`} product={product}/>)}
+              {!this.state.isLoading && internals.products.length > 0 && internals.products.map( (product, i) => {
+                product['vendedorName'] = internals.tienda ? internals.tienda.company : '';
+                return <ProductCard key={`storeProduct-${i}`} product={product}/>
+              })}
             </div>{/*  Columns */}
           </div>
         </div>
