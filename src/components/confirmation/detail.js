@@ -37,7 +37,10 @@ class ConfirmationDetail extends React.Component {
       <section className="section">
         <div className="container">
           {this.state.loading === true && <Loaderb />}
-          {this.state.loading === false && internals.order === null && <p><b>La orden no existe</b></p>}
+          {this.state.loading === false && internals.order === null && <>
+            <h1 className="title is-3 has-text-centered"><b>Oops! La orden no existe</b></h1>
+            <div className="buttons is-centered"><a href="/" className="button is-small is-danger"><b>Volver al inicio</b></a></div>
+          </>}
           {this.state.loading === false && internals.order !== null && <>
             <h2 className="title is-3 has-text-black has-text-centered">Confirmaci&oacute;n de la Orden</h2>
             <hr/>

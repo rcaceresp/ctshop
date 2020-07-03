@@ -5,6 +5,7 @@ import Loader from '../../components/loader/bversion';
 import CartItem from '../../components/cartItem';
 import {formatMoney, priceWithDiscount} from '../../utils/products';
 import shortId from 'shortid';
+import Loaderb from '../../components/loader/bversion';
 
 const internals = {
   products: [],
@@ -29,7 +30,9 @@ class CartPageBase extends React.Component {
       isLoading: true,
       shipping: 0,
       errors: [],
-      paybutton: false
+      paybutton: false,
+      isPaymentProcessing: false,
+      paymentError: false
     };
 
     this.changeDelivery = this.changeDelivery.bind(this);
@@ -124,6 +127,7 @@ class CartPageBase extends React.Component {
             
             return;
           }
+          this.setState({isPaymentProcessing:true});
           return actions.order.create({
               purchase_units: [
                 {       
@@ -180,7 +184,9 @@ class CartPageBase extends React.Component {
                   store.orderTotal = store.totalPrice + store.shipping;
                   store.totalItems = store.products.reduce( (acc, actual) => (acc + actual.qty), 0);
 
-                  await this.props.firebase.db.ref(`orders/${vendor}/${store.orderId}`).set({ ...store }); 
+                  await this.props.firebase.db.ref(`orders/${vendor}/${store.orderId}`).set({ ...store });
+
+                  this.setState({isPaymentProcessing:true});
                   
                 })).then( _ => {
                   this.props.history.push({
@@ -190,6 +196,7 @@ class CartPageBase extends React.Component {
                 });
               } else {
                 console.log('unable to complete payment');
+                this.setState({isPaymentProcessing:true, paymentError: true});
               }
             } catch(e) {
               console.log(e.message);
@@ -297,6 +304,10 @@ class CartPageBase extends React.Component {
                       <div className="tags is-centered">
                         {this.state.errors.length !== 0 && this.state.errors.map( item => <span className="tag is-danger is-rounded"><b>{item}</b></span>)}
                       </div>
+                      {this.state.isPaymentProcessing === true && <><Loaderb /><br/></>}
+                      {this.state.paymentError === true && <>
+                        <p className="has-text-weight-bold has-text-centered">Error procesando el Pago</p>
+                      </>}
                       <div id="paypal-button-container" />
                       {this.props.firebase.auth.currentUser === null && <>
                         <p className="has-text-weight-bold has-text-centered"><span className="icon"><i className="fa fa-exclamation-triangle" /></span> <span>Debes iniciar sesi&oacute;n para realizar la compra</span></p>
