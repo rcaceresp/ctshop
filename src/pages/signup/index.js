@@ -6,6 +6,7 @@ import { withFirebase } from '../../vendor/firebase';
 
 const INITIAL_STATE = {
   username: '',
+  nombre: '',
   email: '',
   passwordOne: '',
   passwordTwo: '',
@@ -35,24 +36,37 @@ class SignUpFormBase extends Component {
   constructor(props) {
     super(props);
     this.state = { ...INITIAL_STATE };
-
   }
  
   onSubmit = event => {
-    const { email, passwordOne } = this.state;
+    event.preventDefault();
+    const { email, passwordOne, nombre } = this.state;
     this.setState({ loading: true });
+
+    if (nombre.trim().length === 0) {
+      this.setState({ loading: false, error : 'Tu Nombre es requerido'});
+      
+      return;
+    }
  
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
+
+        console.log(authUser);
+        
+        this.props.firebase.db.ref(`/users/${authUser.user.uid}/`).set({
+          email,
+          nombre,
+          type: 'client'
+        });
+
         this.setState({ ...INITIAL_STATE });
         this.props.history.push(ROUTES.HOME);
       })
       .catch(error => {
         this.setState({ loading: false, error: error.message });
       });
- 
-    event.preventDefault();
   }
  
   onChange = event => {
@@ -61,6 +75,7 @@ class SignUpFormBase extends Component {
  
   render() {
     const {
+      nombre,
       email,
       error,
       loading,
@@ -82,6 +97,13 @@ class SignUpFormBase extends Component {
         <div className="card-content">
           
           <form onSubmit={this.onSubmit}>
+            <div className="field">
+              <label className="label">Nombre completo:</label>
+              <div className="control has-icons-left is-expanded">
+                <input required="required" name="nombre" value={nombre} onChange={this.onChange} type="text" placeholder="Nombre Completo" className="input"/>
+                <span className="icon is-left"><i className="fa fa-user" /></span>
+              </div>  
+            </div>
             <div className="field">
               <label className="label">Correo Electr&oacute;nico</label>
               <div className="control has-icons-left is-expanded">

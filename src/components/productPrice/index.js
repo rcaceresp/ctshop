@@ -14,7 +14,7 @@ const ProductPrice = props => {
         </span><br/>
       </>}
       {calculatedPrice.discountedPrice === calculatedPrice.original && isCard && <React.Fragment><span className="tag is-light">Precio</span><br/></React.Fragment>}
-    <small>L. </small>{formatMoney(calculatedPrice.discountedPrice)}
+    <small>L </small>{formatMoney(calculatedPrice.discountedPrice)}
     </p>
   );
 };

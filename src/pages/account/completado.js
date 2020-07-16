@@ -16,9 +16,8 @@ const AccountPage = () => (
               </div>
               <div className="column">
                 <div className="card-content">
-                  <h3 className="title is-3">Bienvenido, {authUser.nombre}</h3>
                   <hr/>
-                  <Orders filterValue='pendiente'/>
+                  <Orders filterValue='completado'/>
                 </div>
               </div>
             </div>

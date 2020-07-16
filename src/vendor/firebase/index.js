@@ -13,6 +13,10 @@ class Firebase {
 
   doSignInWithEmailAndPassword = (email, password) => this.auth.signInWithEmailAndPassword(email, password);
 
+  doPasswordResetEmail = email => this.auth.sendPasswordResetEmail(email);
+
+  doGetUserInfo = (userid) => this.db.ref(`/users/${userid}`);
+
   doSignOut = () => {
     this.auth.signOut();
     window.location = '/';
@@ -20,7 +24,6 @@ class Firebase {
   
   products = () => this.db.ref('products');
   companies = () => this.db.ref('companies');
-  
 }
 
 export default Firebase;

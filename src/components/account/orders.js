@@ -42,12 +42,13 @@ class UserOrdersBase extends React.Component {
   }
 
   render() {
+    const pendienteMessage = this.props.filterValue === 'pendiente' ? 'Pendientes': 'Completadas';
     return(
       <> 
-        <h3 className="title is-5">Ordenes Pendientes</h3>
+        <h3 className="title is-5">Ordenes {pendienteMessage}</h3>
         <hr/>
         {this.state.loading && <Loader />}
-        {!this.state.loading && internals.orders.length === 0 && <p className="has-text-centered">No tienes ordenes pendientes</p>}
+        {!this.state.loading && internals.orders.length === 0 && <p className="has-text-centered">No tienes ordenes {pendienteMessage}</p>}
         {!this.state.loading && internals.orders.length > 0 && internals.orders.map( order => <>
           <div className="card">
             <div className="card-content">

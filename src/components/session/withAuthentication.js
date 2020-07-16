@@ -14,13 +14,21 @@ const withAuthentication = Component => {
     }
 
     componentDidMount() {
-      this.listener = this.props.firebase.auth.onAuthStateChanged(
-        authUser => {
-          authUser
-            ? this.setState({ authUser })
-            : this.setState({ authUser: null });
-        },
-      );
+      this.listener = this.props.firebase.auth.onAuthStateChanged(authUser => {
+        const user = authUser ? {...authUser} : null;
+
+        if (user) {
+          this.props.firebase.db.ref(`/users/${user.uid}`).once('value').then( snap => {
+            const info = snap.val();
+
+            user.nombre = info.nombre;
+
+            this.setState({ authUser: user })
+          });
+        } else {
+          this.setState({ authUser: null });
+        }
+      });
     }
 
     componentWillUnmount() {

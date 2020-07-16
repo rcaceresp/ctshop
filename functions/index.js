@@ -14,7 +14,9 @@ exports.sendConfEmail = functions.database.ref('/users/{userId}/orders/{orderId}
   });
 
   order['formatted_orderTotal'] = `L ${formatMoney(order.orderTotal)}`;
-
+  order['tipo_entrega'] = order.shipping === 0 ? 'Recoger en tienda' : 'A domicilio';
+  order['formatted_shipping'] = `L ${formatMoney(order.shipping)}`;
+  
 
   return client.transmissions.send({
     options: { sandbox: false },
