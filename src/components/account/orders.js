@@ -62,7 +62,7 @@ class UserOrdersBase extends React.Component {
                       <th>&nbsp;</th>
                       <th>Producto</th>
                       <th><abbr title="Played">Vendedor</abbr></th>
-                      <th><abbr title="Won">Enviado?</abbr></th>
+                      <th><abbr title="Won">Enviado</abbr></th>
                       <th><abbr title="Won">Cant.</abbr></th>
                       <th><abbr title="Won">Total </abbr></th>
                     </tr>
@@ -91,7 +91,7 @@ class UserOrdersBase extends React.Component {
                 </div>
                 <div className="level-item has-text-centered">
                   <div>
-                    <p className="heading">Envio <small>(Incluido)</small></p>
+                    <p className="heading">Env&iacute;o <small>(Incluido)</small></p>
                     <p className="title is-4 has-text-weight-bold">L {formatMoney(order.shipping)}</p>
                   </div>
                 </div>

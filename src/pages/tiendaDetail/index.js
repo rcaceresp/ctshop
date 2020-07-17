@@ -55,8 +55,10 @@ class TiendaDetailPageBase extends React.Component {
           <h2 className="title is-1 has-text-black has-text-weight-bold"><img src={internals.tienda ? internals.tienda.images: internals.tienda} width="100" alt={ internals.tienda ? internals.tienda.company: internals.tienda}/> { internals.tienda ? internals.tienda.company: internals.tienda}</h2>
           <p>{ internals.tienda ? internals.tienda.description: internals.tienda}</p>
           <p> <b>Direcci&oacute;n: </b>{ internals.tienda ? internals.tienda.saddress: internals.tienda}</p>
+          <p> <b>Tel&eacute;fono: </b>{ internals.tienda ? internals.tienda.tel: internals.tienda}</p>
+          <p> <b>Correo Electr&oacute;nico: </b>{ internals.tienda ? internals.tienda.email: internals.tienda}</p>
           <hr/>
-          <h2 className="title is-4">Nuestros productos:</h2>
+          <h2 className="title is-4">Nuestros Productos:</h2>
           {this.state.isLoading && <Loaderb />}
           {!this.state.isLoading && internals.products.length === 0 && <><p className="title is-5 has-text-centered">No hay productos por mostrar</p><div className="buttons is-centered"><a href="/" className="button is-danger is-rounded is-small">Volver al inicio</a></div></>}
           <div className="row">

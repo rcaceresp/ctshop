@@ -26,7 +26,7 @@ const CartItem = props => {
           <div className="column">
             <ProductPrice price={price} discount={ oferta ? oferta.porcentaje : null } isCard={true} />
             {props.deleteFromCart !== null && <div className="buttons is-centered">
-              <button onClick={e => props.deleteFromCart({productID, companyID})} className="button is-danger is-small "><span className="icon"><i className="fa fa-trash"/></span> <span>Remover</span></button>
+              <button onClick={e => props.deleteFromCart({productID, companyID})} className="button is-danger is-small "><span className="icon"><i className="fa fa-trash"/></span> <span>Eliminar</span></button>
             </div>}
           </div>
         </div>

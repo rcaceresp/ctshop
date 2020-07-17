@@ -39,7 +39,7 @@ class TiendasPageBase extends React.Component {
         <SearchBar noText={true}/>
         <section className="section">
           <div className="container">
-            <h2 class="title is-3 has-text-black">Nuestros afiliados</h2>
+            <h2 class="title is-3 has-text-black">Nuestros Afiliados</h2>
             <hr/>
             {this.state.isLoading && <Loaderb />}
             <div className="row">

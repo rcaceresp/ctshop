@@ -236,17 +236,17 @@ class CartPageBase extends React.Component {
                       <h3 className="title is-4 has-text-centered">Resumen de la Orden:</h3>
                       <hr/>
                       <p className="has-text-centered has-text-weight-bold">Subtotal:</p>
-                      <h3 className="title is-3 has-text-centered has-text-danger">L {formatMoney(internals.totalPrice)}</h3>
+                      <h3 className="title is-3 has-text-centered has-text-danger">L{formatMoney(internals.totalPrice)}</h3>
                       <p className="has-text-centered has-text-weight-bold">Total Items: {internals.totalItems}</p>
-                      <p className="has-text-centered"><small>ISV inclu&iacute;do</small></p>
+                      <p className="has-text-centered"><small>ISV incluido</small></p>
                       <hr/>
-                      <h3 className="title is-4 has-text-centered">M&eacute;todo de Envio:</h3>
+                      <h3 className="title is-4 has-text-centered">M&eacute;todo de Env&iacute;o:</h3>
                       <div className="has-text-centered">
                         <div className="field">
                           <div className="select is-rounded is-danger is-small">
                             <select onChange={ e => this.changeDelivery(e.target.value)}>
                               <option value="dom">Entrega a Domicilio</option>
-                              <option value="rgt">Recoger en tienda</option>
+                              <option value="rgt">Recoger en Tienda</option>
                             </select>
                           </div>
                         </div>
@@ -285,19 +285,19 @@ class CartPageBase extends React.Component {
                       <div className="row">
                         <div className="columns is-mobile">
                           <div className="column is-half"><p className="has-text-right has-text-weight-bold">Subtotal:</p></div>
-                          <div className="column is-half"><p className="has-text-right has-text-weight-bold">L {formatMoney(internals.totalPrice)}</p></div>
+                          <div className="column is-half"><p className="has-text-right has-text-weight-bold">L{formatMoney(internals.totalPrice)}</p></div>
                         </div>
                       </div>
                       <div className="row">
                         <div className="columns">
-                          <div className="column is-half"><p className="has-text-right has-text-weight-bold">Envio:</p></div>
-                          <div className="column is-half"><p className="has-text-right has-text-weight-bold">L {formatMoney(this.state.shipping)}</p></div>
+                          <div className="column is-half"><p className="has-text-right has-text-weight-bold">Env&iacute;o:</p></div>
+                          <div className="column is-half"><p className="has-text-right has-text-weight-bold">L{formatMoney(this.state.shipping)}</p></div>
                         </div>
                       </div>
                       <div className="row">
                         <div className="columns">
                           <div className="column is-half"><p className="has-text-right has-text-weight-bold">Total:</p></div>
-                          <div className="column is-half"><p className="has-text-right has-text-weight-bold">L {formatMoney(internals.totalPrice + this.state.shipping)} <small>(USD {formatMoney((internals.totalPrice +this.state.shipping)/internals.dolar)})</small></p></div>
+                          <div className="column is-half"><p className="has-text-right has-text-weight-bold">L{formatMoney(internals.totalPrice + this.state.shipping)} <small>(USD {formatMoney((internals.totalPrice +this.state.shipping)/internals.dolar)})</small></p></div>
                         </div>
                       </div>
                       <hr/>

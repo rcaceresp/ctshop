@@ -56,14 +56,14 @@ class Menu extends React.Component {
           <div className={`navbar-menu ${menuIsOpenClassString} is-light`}>
             <div className="navbar-start">
               {/* <Link to={ROUTES.HOME} className="navbar-item"><b>Inicio</b></Link> */}
-              <a href="https://admin.catrachosshop.com/" target="_blank" rel="noopener noreferrer" className="navbar-item"><b>Empieza a vender</b></a>
-              <Link to={ROUTES.ABOUT_US} className="navbar-item"><b>¿Como funciona?</b></Link>
+              <a href="https://admin.catrachosshop.com/" target="_blank" rel="noopener noreferrer" className="navbar-item"><b>Empieza a Vender</b></a>
+              <Link to={ROUTES.ABOUT_US} className="navbar-item"><b>¿C&oacute;mo funciona?</b></Link>
               <Link to={ROUTES.AFILLIATES} className="navbar-item"><b>Nuestras Tiendas</b></Link>
             </div>
             <div className="navbar-end">
               <a className="navbar-item is-link is-small" href="/carrito"><i className="fa fa-shopping-cart" /></a>
               {!authUser && <Link to={ROUTES.SIGN_UP} className="navbar-item is-link is-small">
-                <span className="icon"><i className="fa fa-id-badge"/></span><b>Registrate</b>
+                <span className="icon"><i className="fa fa-id-badge"/></span><b>Reg&iacute;strate</b>
               </Link>}
               {!authUser && <Link to={ROUTES.SIGN_IN} className="navbar-item is-link is-small">
                   <span className="icon"><i className="fa fa-sign-in"/></span><b>Inicia Sesi&oacute;n</b>

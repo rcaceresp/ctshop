@@ -17,9 +17,9 @@ const INITIAL_STATE = {
 const SignUpPage = () => (
   <section className="section">
     <div className="container">
-      <h3 className="title is-2 has-text-centered">Registrate</h3>
+      <h3 className="title is-2 has-text-centered">Reg&iacute;strate</h3>
       <hr/>
-      <p className="has-text-centered">Llena el formulario a continuacion y se parte de este emprendimiento en favor de la comunidad.</p>
+      <p className="has-text-centered">Llena el formulario a continuaci&oacute;n y se parte de este emprendimiento en favor de la comunidad.</p>
       <hr/>
       <div className="row">
         <div className="columns is-centered is-desktop">
@@ -92,13 +92,13 @@ class SignUpFormBase extends Component {
       <div className="card is-info">
         <p className="has-text-centered">
           <br/>
-          <img src="activation.svg" alt="Registrate" width="80"/>
+          <img src="activation.svg" alt="Reg&iacute;strate" width="80"/>
         </p>
         <div className="card-content">
           
           <form onSubmit={this.onSubmit}>
             <div className="field">
-              <label className="label">Nombre completo:</label>
+              <label className="label">Nombre Completo:</label>
               <div className="control has-icons-left is-expanded">
                 <input required="required" name="nombre" value={nombre} onChange={this.onChange} type="text" placeholder="Nombre Completo" className="input"/>
                 <span className="icon is-left"><i className="fa fa-user" /></span>
@@ -107,7 +107,7 @@ class SignUpFormBase extends Component {
             <div className="field">
               <label className="label">Correo Electr&oacute;nico</label>
               <div className="control has-icons-left is-expanded">
-                <input required="required" name="email" value={email} onChange={this.onChange} type="text" placeholder="Correo Electronico" className="input"/>
+                <input required="required" name="email" value={email} onChange={this.onChange} type="text" placeholder="Correo Electr&oacute;nico" className="input"/>
                 <span className="icon is-left"><i className="fa fa-envelope" /></span>
               </div>  
             </div>
@@ -119,9 +119,9 @@ class SignUpFormBase extends Component {
               </div>
             </div>
             <div className="field">
-              <label className="label">Reingresa la contrase&ntilde;a</label>
+              <label className="label">Reingresa la Contrase&ntilde;a</label>
               <div className="control has-icons-left ">
-                <input required="required" name="passwordTwo" value={passwordTwo} onChange={this.onChange} type="password" placeholder="Reingresa la contrase&ntilde;a" className="input"/>
+                <input required="required" name="passwordTwo" value={passwordTwo} onChange={this.onChange} type="password" placeholder="Reingresa la Contrase&ntilde;a" className="input"/>
                 <span className="icon is-left"><i className="fa fa-lock" /></span>
               </div>
             </div>
@@ -139,7 +139,7 @@ class SignUpFormBase extends Component {
         </div>
         <hr/>
         <div className="buttons is-centered">
-          <button className="button is-text is-small">Terminos y Condiciones</button>
+          <button className="button is-text is-small">T&eacute;rminos y Condiciones</button>
         </div>
       </div>
     );

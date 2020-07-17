@@ -17,7 +17,7 @@ import { AuthUserContext } from '../session';
                                     <img src="phone.svg" width={footerIconWidth} alt="Nuestro contacto" />
                                     <h5 className="title is-5 has-text-white">Cont&aacute;ctenos</h5>
                                     <ul>
-                                        <li><a className="has-text-white" href="tel:+504 3000-0000">+(504) 3000-0000 </a></li>
+                                        <li><a className="has-text-white" href="tel:+504 3000-0000">+(504) 2555-0000 </a></li>
                                         <li><label htmlFor=""><b>Oficinas:</b></label></li>
                                         <li><a className="has-text-white" href="tel:+504 3000-0000">+(504) 3000-0000</a></li>
                                     </ul>
@@ -25,14 +25,14 @@ import { AuthUserContext } from '../session';
                                 <div className="column">
                                     <img src="gps.svg" width={footerIconWidth} alt="Nuestra direccion" />
                                     <h5 className="title is-5 has-text-white">Direcci&oacute;n</h5>
-                                    <p>San Pedro Sula: Barrio San Fernando, <br />1ra calle entre 11-12 avenida N.E. Autopista hacia el Aeropuerto Internacional Ramon Villeda Morales.</p>
+                                    <p>Nuevos Horizontes Business Center, <br />calle principal a Rancho el Coco, San Pedro Sula, Cort&eacute;s</p>
                                 </div>
                                 <div className="column">
                                     <img src="technology.svg" width={footerIconWidth} alt="Nuestra Informacion" />
                                     <h5 className="title is-5 has-text-white">Informaci&oacute;n</h5>
                                     <ul>
                                         <li><Link className="has-text-white" to={ROUTES.ABOUT_US}>Nosotros</Link></li>
-                                        <li><a className="has-text-white" href="/">Terminos y Condiciones</a></li>
+                                        <li><a className="has-text-white" href="/">T&eacute;rminos y Condiciones</a></li>
                                         <li><a className="has-text-white" href="/">Preguntas Frecuentes </a></li>
                                     </ul>
                                 </div>
@@ -42,7 +42,7 @@ import { AuthUserContext } from '../session';
                             <div className="columns is-centered">
                                 <div className="column is-three-quarters">
                                     <hr/>
-                                    <p>Hecho por Reina Caceres <span role="img" aria-label="Love">💖</span></p>
+                                    <p>Hecho por Reina Caceres</p>
                                 </div>
                             </div>
                         </div>

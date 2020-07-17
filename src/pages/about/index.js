@@ -11,7 +11,7 @@ const About = () => {
               <hr/>
               <p><a href="/"><b>Catrachos Shop</b></a> es una plataforma de tiendas online para micro, peque&ntilde;a y medianas empresas donde nuestros afiliados ofrecen sus productos a trav&eacute;s de la herramienta de la misma manera que comercializan en su tienda f&iacute;sica. Aqu&iacute; encontrar&aacute;s una diversidad de productos y empresas locales que se adapta a lo que buscas.  Apoya la creatividad, el dise&ntilde;o y la innovaci&oacute;n de estos empresarios.</p>
               <hr />
-              <p>Estos son algunos datos que debes conocer sobre como funciona <a href="/"><b>Catrachos Shop</b></a>:</p>
+              <p>Estos son algunos datos que debes conocer sobre c&oacute;mo funciona <a href="/"><b>Catrachos Shop</b></a>:</p>
               <ul>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Reg&iacute;strate.</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Revisa el cat&aacute;logo de productos de las tiendas o busca lo que necesitas.</li>

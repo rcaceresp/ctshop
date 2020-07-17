@@ -18,7 +18,7 @@ const TiendasCard = props => {
             <Link to={`/tienda/${_id}`}><h5 class="product-title title is-6 has-text-weight-bold has-text-centered">{company}</h5></Link>
             <br/>
             <div className="buttons is-centered">
-              <Link to={`/tienda/${_id}`} className="button is-danger is-small"><b>Ver productos</b></Link>
+              <Link to={`/tienda/${_id}`} className="button is-danger is-small"><b>Ver Productos</b></Link>
             </div>
           </div>
         </div>

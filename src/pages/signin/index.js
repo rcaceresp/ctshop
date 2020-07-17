@@ -72,14 +72,14 @@ class SignInFormBase extends Component {
       <div className="card is-info">
         <p className="has-text-centered">
           <br/>
-          <img src="key.svg" alt="Registrate" width="80"/>
+          <img src="key.svg" alt="Reg&iacute;strate" width="80"/>
         </p>
         <div className="card-content">
           <form onSubmit={this.onSubmit}>
             <div className="field">
               <label className="label">Correo Electr&oacute;nico</label>
               <div className="control has-icons-left is-expanded">
-                <input name="email" value={email} onChange={this.onChange} type="text" placeholder="Correo Electronico" className="input"/>
+                <input name="email" value={email} onChange={this.onChange} type="text" placeholder="Correo Electr&oacute;nico" className="input"/>
                 <span className="icon is-left"><i className="fa fa-envelope" /></span>
               </div>  
             </div>
@@ -104,7 +104,7 @@ class SignInFormBase extends Component {
         </div>
         <hr/>
         <div className="buttons is-centered">
-          <button className="button is-text is-small">Terminos y Condiciones</button>
+          <button className="button is-text is-small">T&eacute;rminos y Condiciones</button>
         </div>
       </div>
     );
