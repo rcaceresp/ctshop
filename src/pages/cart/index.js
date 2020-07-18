@@ -6,6 +6,7 @@ import CartItem from '../../components/cartItem';
 import {formatMoney, priceWithDiscount} from '../../utils/products';
 import shortId from 'shortid';
 import Loaderb from '../../components/loader/bversion';
+import config from '../../config';
 
 const internals = {
   products: [],
@@ -19,7 +20,8 @@ const internals = {
   clientname: null,
   email: null,
   address: null,
-  phone: null
+  phone: null,
+  emptyCart: {ckey: config._cartID, cart: {}}
 }
 
 class CartPageBase extends React.Component {
@@ -189,6 +191,8 @@ class CartPageBase extends React.Component {
                   this.setState({isPaymentProcessing:true});
                   
                 })).then( _ => {
+                  // Clear cart here
+                  setToLocalStorage('_cart', internals.emptyCart);
                   this.props.history.push({
                     pathname: `/confirmacion/${clientOrder.orderId}`,
                     state: {}

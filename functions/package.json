@@ -13,6 +13,7 @@
     "node": "10"
   },
   "dependencies": {
+    "firebase": "^7.16.1",
     "firebase-admin": "^8.10.0",
     "firebase-functions": "^3.6.1",
     "sparkpost": "^2.1.4"
