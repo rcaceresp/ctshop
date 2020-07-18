@@ -52,7 +52,7 @@ class BusquedaResults extends React.Component {
           <hr/>
           {this.state.loading === true && <Loader/>}
           {this.state.loading === false && this.state.data.length === 0 && <>
-            <p className="has-text-centered">No hay resultados para la busqueda</p>
+            <p className="has-text-centered">No hay resultados para la b&uacute;squeda</p>
             <br/>
             <div className="buttons is-centered">
               <a href="/" className="button is-danger is-small is-rounded"><b>Volver al Inicio</b></a>
